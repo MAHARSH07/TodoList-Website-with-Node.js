@@ -1,4 +1,5 @@
-Our project is a user-friendly To-Do List application built with Node.js and Mongoose. Users can create customized To-Do Lists by simply typing a unique URL. Key features include:
+Our project is a user-friendly To-Do List application built with Node.js and Mongoose. Users can create customized To-Do Lists of their own names by simply typing a unique URL(Example:- https://localhost:3000/Work 
+ -> This creates a todoList named Work). Key features include:
 
 Effortless Task Management: Add and delete tasks with ease.
 Dynamic List Creation: Instantly create unique lists with unique URLs.
