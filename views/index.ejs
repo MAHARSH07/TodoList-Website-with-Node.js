@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+
+  <br />
+  <main>
+    <div class="box" id="heading">
+      <h1>
+        <%=locals.listTitle %>
+      </h1>
+    </div>
+
+    <div class="container">
+      <% locals.existingItems.forEach(function(existingItem){ %>
+        <form action="/delete" method="post">
+          <div class="fl">
+            <input type="checkbox" class="strikethrough" name = "checkbox" value="<%= existingItem._id %>" onchange="this.form.submit()" />
+            <label for="packers" class="strikethrough">
+              <p>
+                <%=existingItem.name%>
+              </p>
+            </label>
+          </div>
+          <input type="hidden" name="listName" value="<%= listTitle %>" />
+        </form>
+        <% }) %>
+          <form class="fl" action="/" method="post">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off" />
+            <button type="submit" name="list" value= <%= listTitle %>>+</button>
+          </form>
+    </div>
+  </main>
+
+  <%- include("partials/footer.ejs") %>

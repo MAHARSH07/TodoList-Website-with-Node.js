@@ -1,0 +1,28 @@
+<!-- <%- include("partials/header.ejs") %>
+
+<main>
+  <div class="box" id="heading">
+    <h1>Work List</h1>
+  </div>
+  <div class="container">
+    <% locals.existingWorkItems.forEach(function(existingItem){ %>
+    <div class="fl">
+      <input type="checkbox" class="strikethrough" />
+      <label for="packers" class="strikethrough"
+        ><p><%=existingItem%></p></label
+      >
+    </div>
+    <% }) %>
+    <form class="fl" action="/work" method="post">
+      <input
+        type="text"
+        name="newItem"
+        placeholder="New Item"
+        autocomplete="off"
+      />
+      <button type="submit" name="list">+</button>
+    </form>
+  </div>
+</main>
+
+<%- include("partials/footer.ejs") %> -->
